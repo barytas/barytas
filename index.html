@@ -9,101 +9,95 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap">
 
     <style>
-        body {
-            font-family: 'Caveat', cursive;
-            font-size: 155%;
-            background-image: url('https://i.ibb.co/7ryGrYv/Untitled228-20230809161915.png');
-        }
+  body {
+    font-family: 'Caveat', cursive;
+    font-size: 155%;
+    background-image: url('images/Untitled228-20230809161915.png'); /* Lokalny plik */
+  }
 
-        .contact .inner a img {
-            font-size: 0;
-        }
-        .contact .inner a img:before {
-            font-size: 1em;
-            display: block;
-        }
+  .contact .inner a img {
+    font-size: 0;
+  }
 
-        /* Icons */
-        .contact .inner .f-row:nth-child(1) .f-col:nth-child(1) a:before {
-            content: url('https://i.ibb.co/Vt0nJg5/Untitled233-20230809194109.png');
-        }
-        .contact .inner .f-row:nth-child(1) .f-col:nth-child(2) a:before {
-            content: url('https://i.ibb.co/2S5mYsx/Untitled234-20230809194303.png');
-        }
-        .contact .inner .f-row:nth-child(2) .f-col:nth-child(1) a:before {
-            content: url('https://i.ibb.co/y8xpRWS/Untitled235-20230809195622.png');
-        }
-        .contact .inner .f-row:nth-child(2) .f-col:nth-child(2) a:before {
-            content: url('https://i.ibb.co/3rCwbtR/Untitled236-20230809195737.png');
-        }
+  .contact .inner a img:before {
+    font-size: 1em;
+    display: block;
+  }
 
-        /* Add other icon CSS here ... */
+  /* Ikony */
+  .contact .inner .f-row:nth-child(1) .f-col:nth-child(1) a:before {
+    content: url('images/Untitled233-20230809194109.png'); /* Lokalny plik */
+  }
 
-        .profile {
-            background: #FFF1F9;
-        }
-        nav .top {
-            background-color: #FD71AD;
-            border: 4px dotted #E73B80;
-        }
+  .contact .inner .f-row:nth-child(1) .f-col:nth-child(2) a:before {
+    content: url('images/Untitled234-20230809194303.png'); /* Lokalny plik */
+  }
 
-        nav .links {
-            background-color: #FEBCD8;
-            background-size: cover;
-            text-align: center;
-            border: 4px dotted #E73B80;
-        }
+  .contact .inner .f-row:nth-child(2) .f-col:nth-child(1) a:before {
+    content: url('images/Untitled235-20230809195622.png'); /* Lokalny plik */
+  }
 
-        .profile h1 {
-            color: #811F51;
-            font-size: 30px;
-            text-align: center;
-        }
+  .contact .inner .f-row:nth-child(2) .f-col:nth-child(2) a:before {
+    content: url('images/Untitled236-20230809195737.png'); /* Lokalny plik */
+  }
 
-        .profile .general-about {
-            flex-wrap: wrap;
-            text-align: center;
-            background-image: linear-gradient(to left top, #fd71ad, #fe80b6, #fe8fbe, #fe9dc6, #feaace, #feaace, #feaace, #feaace, #fe9dc6, #fe8fbe, #fe80b6, #fd71ad);
-            color: #811F51;
-            border: 4px dotted #E73B80;
-        }
+  /* Inne obrazy - dodaj dla reszty ikon */
+  
+  .profile {
+    background: #FFF1F9;
+  }
 
-        /* Additional styles */
-        .friends {
-            display: block;
-            height: 400px !important;
-            overflow-y: scroll;
-            border: 4px dotted #E73B80 !important;
-        }
+  nav .top {
+    background-color: #FD71AD;
+    border: 4px dotted #E73B80;
+  }
 
-        a {
-            color: #811F51 !important;
-        }
+  nav .links {
+    background-color: #FEBCD8;
+    background-size: cover;
+    text-align: center;
+    border: 4px dotted #E73B80;
+  }
 
-        body:before {
-            content: " ";
-            height: 100vh;
-            width: 100vw;
-            display: block;
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            z-index: 100;
-            background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXhhZHM2bzF2Yjk1eWdoaXY0OXh4b2Q1djJ3eTUwN3dtdzRrZWJlYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TpFLtIxXkjEr5820LT/giphy.gif');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            animation: fadeOut 1s ease 0s 1 normal forwards;
-            pointer-events: none;
-        }
+  .profile h1 {
+    color: #811F51;
+    font-size: 30px;
+    text-align: center;
+  }
 
-        @keyframes fadeOut {
-            0.0% { opacity: 1; }
-            75% { opacity: 1; }
-            100% { opacity: 0; }
-        }
+  .profile .general-about {
+    flex-wrap: wrap;
+    text-align: center;
+    background-image: linear-gradient(to left top, #fd71ad, #fe80b6, #fe8fbe, #fe9dc6, #feaace, #feaace, #feaace, #feaace, #fe9dc6, #fe8fbe, #fe80b6, #fd71ad);
+    color: #811F51;
+    border: 4px dotted #E73B80;
+  }
 
-    </style>
+  /* Styl dla tła GIF */
+  body:before {
+    content: " ";
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 100;
+    background-image: url('images/fadeout-gif.gif'); /* Lokalny plik */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: fadeOut 1s ease 0s 1 normal forwards;
+    pointer-events: none;
+  }
+
+  @keyframes fadeOut {
+    0.0% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+</style>
+
 </head>
 <body>
     <!-- Your page content goes here -->
