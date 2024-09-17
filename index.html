@@ -13,6 +13,9 @@
             font-family: 'Caveat', cursive;
             font-size: 155%;
             background-image: url('https://i.ibb.co/7ryGrYv/Untitled228-20230809161915.png');
+            margin: 0;
+            padding: 0;
+            position: relative; /* Dodane dla poprawnego działania absolutnego pozycjonowania */
         }
 
         .contact .inner a img {
@@ -88,7 +91,7 @@
             position: fixed; 
             top: 0; 
             left: 0; 
-            z-index: 100;
+            z-index: 1; /* Niższy z-index dla tła */
             background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXhhZHM2bzF2Yjk1eWdoaXY0OXh4b2Q1djJ3eTUwN3dtdzRrZWJlYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TpFLtIxXkjEr5820LT/giphy.gif');
             background-size: cover;
             background-repeat: no-repeat;
@@ -103,28 +106,51 @@
             100% { opacity: 0; }
         }
 
+        /* Pozycjonowanie obrazka w prawym dolnym rogu */
+        #floating-image {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            z-index: 200; /* Wyższy z-index dla obrazka */
+            pointer-events: none; /* Aby obrazek nie blokował interakcji z tekstem */
+        }
+
+        /* Stylizacja treści z marginesem dolnym dla przestrzeni na obrazek */
+        .content {
+            margin-bottom: 80px; /* Dostosuj wartość w zależności od wysokości obrazka */
+        }
+
+        /* Media queries dla lepszej widoczności na telefonach */
+        @media (max-width: 600px) {
+            #floating-image {
+                right: 5px;
+                bottom: 5px;
+                width: 50px; /* Dostosuj szerokość dla mniejszych ekranów */
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Your page content goes here -->
-    <div style="position: fixed; right: 1px; bottom: 9px; z-index: 200;">
+    <!-- Twoja zawartość strony -->
+    <div id="floating-image">
         <img src="https://i.ibb.co/jZT2LbZ/Untitled243-20230810065655.png" alt="GIF"/>
     </div>
 
-    <!-- More page content, e.g. your navigation, sections, etc. -->
-
-    Hej Zosia, jako że dziś nie masz sił na gadanie chciałbym choć trochę poprawić ci humor więc proszę opowiem ci historie kuców w tej formie 
-    Więc tak tata swoją przygodę zaczął dostając ją na zastępstwo nigdy nie miał rosyjskiego a on a mimo to kucowa wymagała od nich znajomości 
-    tego języka i każdy, kto nie umie może wyjść i nie wracać więc mój tata bez chwili zawahania wyszedł i już nie wrócił hah to nie dużo ale 
-    była w tamtym momencie bardzo nie miła, mówiąc to... A więc moją historia jest taka na początku tak samo silną ręką była zła bla bla my nie
-    wyszliśmy, ale przez to, że to był czas zaczęcia wojny z Ukrainą powiedziała, że ona wcale nie jest za Rosja haha... miała wojnę z nowakiem 
-    (gangster klasowy), która głównie zaczęła się tym, że na nocowaniu w szkole on ją opluł przypadkiem..... nie wiem, jak to zrobił, ale po prostu 
-    chciał za okno na pluć czasem ludzie tak mają, że muszą pluć palacze core... i trafił ją hah następnie coś nas próbowała uczyć alfabetu,
-    ale w dziwny sposób tak, że w ogóle tego nie robiła aż w końcu doszliśmy do momentu, że tylko przepisujemy rosyjski drukowany na pisany oraz dalej
-    kucowa drze się nowaka i resztę bandy z rosyjskim akcentem nie lubię szczerze tego... lubię jednak jak puszcza jakieś spokojne muzyczki w trakcie 
-    przepisywania więc ogólnie to jej Lorę umie być miła, ale no zależy... A teraz lore kuca on może i guess uczyć każdego przedmiotu nie wiem, czy 
-    legalnie czy nie ale uczył nas od religi po fizyke cały czas dodając coś religijnego lubie go nawet słuchać bo stara się i mówi ciekawe rzeczy 
-    ogólnie był u nas wicedyrektorem a chyba kiedyś i dyrektorem teraz ma uczyć nas rosyjskiego zobaczymy, czy cokolwiek z tego wyniosę liczę na to... 
-    więc tak jeśli sali to przeczytałaś to dzięki i licze, że wrócą ci siły dobranoc lub dzień dobry zależności jak to czytasz!!
+    <!-- Treść strony -->
+    <div class="content">
+        Hej Zosia, jako że dziś nie masz sił na gadanie chciałbym choć trochę poprawić ci humor więc proszę opowiem ci historie kuców w tej formie 
+        Więc tak tata swoją przygodę zaczął dostając ją na zastępstwo nigdy nie miał rosyjskiego a on a mimo to kucowa wymagała od nich znajomości 
+        tego języka i każdy, kto nie umie może wyjść i nie wracać więc mój tata bez chwili zawahania wyszedł i już nie wrócił hah to nie dużo ale 
+        była w tamtym momencie bardzo nie miła, mówiąc to... A więc moją historia jest taka na początku tak samo silną ręką była zła bla bla my nie
+        wyszliśmy, ale przez to, że to był czas zaczęcia wojny z Ukrainą powiedziała, że ona wcale nie jest za Rosja haha... miała wojnę z nowakiem 
+        (gangster klasowy), która głównie zaczęła się tym, że na nocowaniu w szkole on ją opluł przypadkiem..... nie wiem, jak to zrobił, ale po prostu 
+        chciał za okno na pluć czasem ludzie tak mają, że muszą pluć palacze core... i trafił ją hah następnie coś nas próbowała uczyć alfabetu,
+        ale w dziwny sposób tak, że w ogóle tego nie robiła aż w końcu doszliśmy do momentu, że tylko przepisujemy rosyjski drukowany na pisany oraz dalej
+        kucowa drze się nowaka i resztę bandy z rosyjskim akcentem nie lubię szczerze tego... lubię jednak jak puszcza jakieś spokojne muzyczki w trakcie 
+        przepisywania więc ogólnie to jej Lorę umie być miła, ale no zależy... A teraz lore kuca on może i guess uczyć każdego przedmiotu nie wiem, czy 
+        legalnie czy nie ale uczył nas od religi po fizyke cały czas dodając coś religijnego lubie go nawet słuchać bo stara się i mówi ciekawe rzeczy 
+        ogólnie był u nas wicedyrektorem a chyba kiedyś i dyrektorem teraz ma uczyć nas rosyjskiego zobaczymy, czy cokolwiek z tego wyniosę liczę na to... 
+        więc tak jeśli sali to przeczytałaś to dzięki i licze, że wrócą ci siły dobranoc lub dzień dobry zależności jak to czytasz!!
+    </div>
 </body>
 </html>
